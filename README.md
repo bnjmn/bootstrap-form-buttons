@@ -1,4 +1,4 @@
-Form Buttons for Bootstrap v 0.1
+# [Form Buttons for Bootstrap v0.1](http://ptrl.github.com/bootstrap-form-buttons/)
 =============
 
 
