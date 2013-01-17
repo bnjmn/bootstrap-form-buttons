@@ -7,6 +7,7 @@
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="assets/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="styles/bootstrap-form-buttons.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,7 +18,7 @@
     <div class="container">
 
       <div class="page-header">
-        <h1>Form buttons <small>for Bootstrap</small></h1>
+        <h1>Form buttons <small>for Bootstrap</small> <span class="label label-info">v 0.1</span></h1>
       </div>
 
        <!-- Forms
@@ -32,9 +33,12 @@
               <label>Label name</label>
               <input type="text" placeholder="Type something…">
               <span class="help-block">Example block-level help text here.</span>
-              <label class="checkbox">
-                <input type="checkbox"> Check me out
-              </label>
+              <div class="checkbox-group" data-group="checkbox">
+                <label class="checkbox hide">
+                  <input type="checkbox"> Check me out
+                </label>
+                <div class="btn-group" data-toggle="buttons-checkbox"></div>
+              </div>
               <button type="submit" class="btn">Submit</button>
             </fieldset>
           </form>
@@ -45,9 +49,12 @@
     &lt;label&gt;Label name&lt;/label&gt;
     &lt;input type="text" placeholder="Type something…"&gt;
     &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
-    &lt;label class="checkbox"&gt;
-      &lt;input type="checkbox"&gt; Check me out
-    &lt;/label&gt;
+    &lt;div class="checkbox-group" data-group="checkbox"&gt;
+      &lt;label class="checkbox hide"&gt;
+        &lt;input type="checkbox"&gt; Check me out
+        &lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;&lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
     &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;
@@ -78,18 +85,23 @@
           <form class="bs-docs-example form-inline">
             <input type="text" class="input-small" placeholder="Email">
             <input type="password" class="input-small" placeholder="Password">
-            <label class="checkbox">
-              <input type="checkbox"> Remember me
-            </label>
+            <div class="checkbox-group" data-group="checkbox">
+              <label class="checkbox hide">
+                <input type="checkbox"> Remember me
+              </label>
+              <div class="btn-group" data-toggle="buttons-checkbox"></div>
+            </div>
             <button type="submit" class="btn">Sign in</button>
           </form>
 <pre class="prettyprint linenums">
 &lt;form class="form-inline"&gt;
   &lt;input type="text" class="input-small" placeholder="Email"&gt;
   &lt;input type="password" class="input-small" placeholder="Password"&gt;
-  &lt;label class="checkbox"&gt;
-    &lt;input type="checkbox"&gt; Remember me
-  &lt;/label&gt;
+  &lt;div class="checkbox-group" data-group="checkbox"&gt;
+    &lt;label class="checkbox hide"&gt;
+      &lt;input type="checkbox"&gt; Remember me
+    &lt;/label&gt;
+  &lt;/div&gt;
   &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
 &lt;/form&gt;
 </pre>
@@ -117,9 +129,12 @@
             </div>
             <div class="control-group">
               <div class="controls">
-                <label class="checkbox">
-                  <input type="checkbox"> Remember me
-                </label>
+                <div class="checkbox-group" data-group="checkbox">
+                  <label class="checkbox hide">
+                    <input type="checkbox"> Remember me
+                  </label>
+                  <div class="btn-group" data-toggle="buttons-checkbox"></div>
+                </div>
                 <button type="submit" class="btn">Sign in</button>
               </div>
             </div>
@@ -140,9 +155,12 @@
   &lt;/div&gt;
   &lt;div class="control-group"&gt;
     &lt;div class="controls"&gt;
-      &lt;label class="checkbox"&gt;
-        &lt;input type="checkbox"&gt; Remember me
-      &lt;/label&gt;
+      &lt;div class="checkbox-group" data-group="checkbox"&gt;
+        &lt;label class="checkbox hide"&gt;
+          &lt;input type="checkbox"&gt; Remember me
+        &lt;/label&gt;
+        &lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;&lt;/div&gt;
+      &lt;/div&gt;
       &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -179,48 +197,63 @@
           <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
           <h4>Default (stacked)</h4>
           <form class="bs-docs-example">
-            <label class="checkbox">
-              <input type="checkbox" value="">
-              Option one is this and that&mdash;be sure to include why it's great
-            </label>
+            <div class="checkbox-group" data-group="checkbox">
+              <label class="checkbox hide">
+                <input type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+              <div class="btn-group" data-toggle="buttons-checkbox"></div>
+            </div>
             <br>
-            <label class="radio">
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-              Option one is this and that&mdash;be sure to include why it's great
-            </label>
-            <label class="radio">
-              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-              Option two can be something else and selecting it will deselect option one
-            </label>
+            <div class="radio-group" data-group="radio">
+              <label class="radio hide">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+              <label class="radio hide">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+              </label>
+              <div class="btn-group" data-toggle="buttons-radio"></div>
+            </div><!-- /.radio-group -->
           </form>
 <pre class="prettyprint linenums">
-&lt;label class="checkbox"&gt;
-  &lt;input type="checkbox" value=""&gt;
-  Option one is this and that&mdash;be sure to include why it's great
-&lt;/label&gt;
+&lt;div class="checkbox-group" data-group="checkbox"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox" value=""&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+  &lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
-  Option one is this and that&mdash;be sure to include why it's great
-&lt;/label&gt;
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
-  Option two can be something else and selecting it will deselect option one
-&lt;/label&gt;
+&lt;div class="radio-group" data-group="radio"&gt;
+  &lt;label class="radio hide"&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+  &lt;label class="radio hide"&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+    Option two can be something else and selecting it will deselect option one
+  &lt;/label&gt;
+  &lt;div class="btn-group" data-toggle="buttons-radio"&gt;&lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
           <h4>Inline checkboxes</h4>
           <p>Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
           <form class="bs-docs-example">
-            <label class="checkbox inline">
-              <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-            </label>
+            <div class="checkbox-group" data-group="checkbox">
+              <label class="checkbox inline hide">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+              </label>
+              <label class="checkbox inline hide">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+              </label>
+              <label class="checkbox inline hide">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+              </label>
+              <div class="btn-group" data-toggle="buttons-checkbox"></div>
+            </div>
           </form>
 <pre class="prettyprint linenums">
 &lt;label class="checkbox inline"&gt;
@@ -791,5 +824,6 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/google-code-prettify/prettify.js"></script>
+    <script src="scripts/bootstrap-form-buttons.js"></script>
   </body>
 </html>
