@@ -1,4 +1,4 @@
-Form Buttons for Bootstrap
+Form Buttons for Bootstrap v 0.1
 =============
 
 
