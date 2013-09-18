@@ -42,6 +42,10 @@
       }
     })
 
+    // Clear 'active' state of buttons on form reset
+    $('input[type=reset]').click(function(e) {
+      $(this).closest('form').find('button').removeClass('active');
+    })  
 
   })
 
